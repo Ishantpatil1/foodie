@@ -1,5 +1,5 @@
 export default function Thumbnails({ foods }) {
-  if (!Array.isArray(foods)) return null; // or <div>No foods available</div>
+  if (!Array.isArray(foods)) return <div>No food items available.</div>; // Return early if not an array
 
   return (
     <ul className={classes.list}>

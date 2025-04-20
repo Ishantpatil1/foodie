@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import classes from './tags.module.css';
 
 export default function Tags({ tags, forFoodPage }) {
-  if (!Array.isArray(tags)) return null; // or a fallback UI
+  if (!Array.isArray(tags)) return <div>No tags available</div>; // Return early if tags is not an array
 
   return (
     <div
