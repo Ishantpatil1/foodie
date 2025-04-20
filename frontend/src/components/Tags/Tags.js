@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import classes from './tags.module.css';
 
 export default function Tags({ tags, forFoodPage }) {
+  if (!Array.isArray(tags)) return null; // or a fallback UI
+
   return (
     <div
       className={classes.container}
