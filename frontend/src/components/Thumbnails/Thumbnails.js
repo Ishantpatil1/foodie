@@ -1,9 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Price from '../Price/Price';
-import StarRating from '../StarRating/StarRating';
-import classes from './thumbnails.module.css';
 export default function Thumbnails({ foods }) {
+  if (!Array.isArray(foods)) return null; // or <div>No foods available</div>
+
   return (
     <ul className={classes.list}>
       {foods.map(food => (
